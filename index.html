@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Врачи - Онлайн Доктор</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+
+      <section class="header__top">
+        <div class="header__logo-wrapper">
+          <a class="logo__link" href="#">
+            <img class="logo__img" src="" title="Логотип Онлайн Доктор" alt="Логотип Онлайн Доктор">
+            Логотип Онлайн Доктор
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link main-nav__item-link_active" href="#">
+                Врачи
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">
+                Юристы
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">
+                Программы
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">
+                О сервисе
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="account__wrapper">
+          <a class="account__link" href="#">Глеб</a>
+          <div class="account__settings"></div>
+        </div>
+      </section>
+
+      <section class="profile">
+        <nav class="profile-nav">
+          <ul class="profile-nav__list">
+            <li class="profile-nav__item">
+              <a class="profile-nav__item-link" href="index.html">
+                Мои данные
+              </a>
+            </li>
+            <li class="profile-nav__item">
+              <a class="profile-nav__item-link" href="#">
+                Мои консультации
+              </a>
+            </li>
+            <li class="profile-nav__item">
+              <a class="profile-nav__item-link" href="#">
+                Мои программы
+              </a>
+            </li>
+            <li class="profile-nav__item">
+              <a class="profile-nav__item-link" href="#">
+                Проверка связи
+              </a>
+            </li>
+          </ul>
+          <a class="profile__balance" href="#">
+            <span class="profile__balance-info">
+              0 руб.
+            </span>
+          </a>
+        </nav>
+      </section>
+
+    </div>
+  </header>
+
+
+  <main class="main">
+    <div class="main__container">
+
+      <section class="doctors-nav">
+        <h1 class="page-title">Наши врачи</h1>
+        <input class="doctors-nav__search" type="search" value="Введите имя врача">
+
+        <select class="doctors__nav-dropdown" name="age">
+          <option value="all" selected>Для взрослых и детей</option> 
+          <option value="adult">Для взрослых</option>
+          <option value="child">Для детей</option>
+        </select>
+
+        <select class="doctors__nav-dropdown" name="speciality">
+          <option value="all" selected>Все специальности</option> 
+          <option value="gynaecologist">Акушер-гинеколог</option>
+          <option value="allergenist">Аллерголог</option>
+          <option value="andrologist">Андролог</option>
+          <option value="anesthesiologist">Анестезиолог</option>
+          <option value="bacteriologist">Бактериолог</option>
+          <option value="venereologist">Венеролог</option>
+          <option value="virologist">Вирусолог</option>
+          <option value="functional diagnostician">Врач функциональной диагностики</option>
+          <option value="geneticist">Генетик</option>
+          <option value="pediatric surgeon">Детский хирург</option>
+          <option value="preimplantation genetic diagnosis specialist">Специалист по преимплантационной диагностике</option>
+        </select>
+
+        <select class="doctors__nav-dropdown" name="medical setting">
+          <option value="all" selected>Мед.учреждение</option> 
+          <option value="clinic">Клиника</option>
+          <option value="medical centre">Медицинский центр</option>
+        </select>
+
+        <div class="doctors__nav-tick">
+          <input class="doctors__nav-tick-label" id="expert" name="doctor type" type="checkbox" value="expert">
+          <label for="expert" class="doctors__nav-tick-label">
+            Эксперт
+          </label>
+          <div class="help">
+            <div class="help__main">?</div>
+            <div class="help__info">
+              Врачи высшей категории, имеющие многолетний стаж работы и высокую квалификацию
+            </div>
+          </div>
+        </div>
+
+        <div class="doctors__nav-tick">
+          <input class="doctors__nav-tick-label" id="consultant" name="doctor type" type="checkbox" value="expert">
+          <label for="consultant" class="doctors__nav-tick-label">
+            Консультант
+          </label>
+          <div class="help">
+            <div class="help__main">?</div>
+            <div class="help__info">
+              Врачи высшей категории, имеющие многолетний стаж работы и высокую квалификацию
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-result search-result_active">
+        <div class="search-result__header">
+          <b class="search-result__title search-result__title_active">
+            Все врачи
+          </b>
+          <b class="search-result__title search-result__title_active">
+            Избранные
+          </b>
+        </div>
+
+        <ul class="search-result__list">
+          <li class="search-result__item">
+            <article class="specialist">
+              <img class="specialist-img" src="#" title="Фотография специалиста" alt="Фотография специалиста">
+              <div class="specialist__about">
+                <h2 class="specialist__name">
+                  Иванов Иван
+                </h2>
+                <span class="specialist__specialities">
+                  123, Акушер-Гинеколог
+                </span>
+                <span class="specialist__type">консультант</span>
+              </div>
+
+              <div class="specialist__management">
+                <div class="specialist__visit">
+                  Стоимость консультации
+                  <span class="specialist__visit-price">2000 &#8381;</span>
+                  <a class="btn" href="#">
+                    Записаться на прием
+                  </a>
+                </div>
+                <button class="add-to-favourites" type="button">
+                  Добавить в избранные
+                </button>
+              </div>
+            </article>
+          </li>
+
+          <li class="search-result__item">
+            <article class="specialist">
+              <img class="specialist-img" src="#" title="Фотография специалиста" alt="Фотография специалиста">
+              <div class="specialist__about">
+                <h2 class="specialist__name">
+                  Сулима Светлана Владимировна
+                </h2>
+                <span class="specialist__specialities">
+                  Анестезиолог, Вирусолог, Венеролог, Аллерголог, Андролог, Бактериолог
+                </span>
+                <span class="specialist__type">эксперт</span>
+              </div>
+
+              <div class="specialist__management">
+                <div class="specialist__visit">
+                  Стоимость консультации
+                  <span class="specialist__visit-price">1200 &#8381;</span>
+                  <a class="btn" href="#">
+                    Записаться на прием
+                  </a>
+                </div>
+                <button class="add-to-favourites" type="button">
+                  Убрать из избранных
+                </button>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+
+    </div>
+  </main>
+
+
+  <footer>
+
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
