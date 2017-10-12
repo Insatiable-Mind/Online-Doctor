@@ -1,0 +1,45 @@
+.account {
+  float: right;
+}
+
+.account__link {
+  display: block;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    width: 39px;
+    height: 44px;
+    margin-right: 2rem;
+
+    vertical-align: middle;
+
+    background: {
+      image: url("../img/spritesheet.png");
+      position: -10px -10px;
+    }
+  }
+
+  &::after {
+    content: "";
+
+    display: inline-block;
+    width: 20px;
+    height: 11px;
+    margin-left: 1rem;
+
+    vertical-align: middle;
+
+    background: {
+      image: url('../img/spritesheet.png');
+      position:  -10px -74px;
+    }
+  }
+}
+
+.account__name {
+  vertical-align: middle;
+
+  border-bottom: .1rem dotted $black;
+}

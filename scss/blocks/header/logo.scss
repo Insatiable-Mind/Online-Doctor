@@ -1,0 +1,16 @@
+.logo-wrapper {
+  float: left;
+
+  @include width($prop: width, $unit: %, $child: 180, $parent: $header-top);
+  @include width($prop: margin-right, $unit: %, $child: 40, $parent: $header-top);
+}
+
+.logo__link {
+  display: block;
+}
+
+.logo__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

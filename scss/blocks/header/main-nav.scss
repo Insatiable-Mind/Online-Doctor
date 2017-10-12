@@ -1,0 +1,32 @@
+.main-nav {
+  float: left;
+
+  @include width($prop: width, $unit: %, $child: 690, $parent: $header-top);
+}
+
+.main-nav__list {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: bold;
+}
+
+.main-nav__item {
+
+}
+
+.main-nav__item-link {
+  display: block;
+
+  &:hover {
+    color: #08c0de;
+  }
+}
+
+.main-nav__item-link_active {
+  color: #08c0de;
+
+  &:hover {
+    cursor: default;
+  }
+}

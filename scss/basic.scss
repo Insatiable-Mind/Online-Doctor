@@ -1,0 +1,84 @@
+//*** ПЕРЕМЕННЫЕ ***//
+// Цвета
+$white: #fff;
+$black: #000;
+$lightblue: #edf8fa;
+$lightblue2: #e5f1f4;
+$darkblue: #00728f;
+$red: #f0505a;
+$lightred: #fef3f3;
+$bg-blue: #4cbaca;
+$font-blue: #00aabe;
+
+// Размеры шрифта
+$h1-font-size: 4.8rem;
+$specialist-name-font-size: 3.8rem;
+$price-font-size: 3.9rem;
+$font-small: 1.5rem;
+
+// Размеры элементов
+$header-top: 1410;
+$header-bottom: 1335;
+
+
+//*** PLACEHOLDERS ***//
+%container {
+  width: 68%;
+  margin: 0 auto;
+}
+
+//*** Mixins ***//
+@mixin width($prop, $unit, $child, $parent) {
+  #{$prop}: ($child * 100 / $parent) + $unit;
+}
+
+//*** ШРИФТ ***//
+@font-face {
+  font-family: "CirceRounded";
+  font-weight: normal;
+  src: url(../fonts/CircleRoundedRegular.woff2);
+}
+
+@font-face {
+  font-family: "CirceRounded";
+  font-weight: bold;
+  src: url(../fonts/CircleRoundedBold.woff2);
+}
+
+//*** БАЗОВЫЕ СТИЛИ ***//
+html {
+  font-family: "CirceRounded", sans-serif;
+  font-size: 62.5%;
+  line-height: 1.2;
+  color: $black;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.page-title {
+  font-size: $h1-font-size;
+  font-weight: bold;
+  margin: {
+    top: 30px;
+    bottom: 30px;
+  }
+}
+

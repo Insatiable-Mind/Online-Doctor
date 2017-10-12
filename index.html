@@ -11,13 +11,11 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__container">
-
-      <section class="header__top">
-        <div class="header__logo-wrapper">
+    <section class="header__top">
+      <div class="header__top-wrapper">
+        <div class="logo-wrapper">
           <a class="logo__link" href="#">
-            <img class="logo__img" src="" title="Логотип Онлайн Доктор" alt="Логотип Онлайн Доктор">
-            Логотип Онлайн Доктор
+            <img class="logo__img" src="img/logo.png" title="Логотип Онлайн Доктор" alt="Логотип Онлайн Доктор" width="143" height="57">
           </a>
         </div>
         <nav class="main-nav">
@@ -54,13 +52,18 @@
             </li>
           </ul>
         </nav>
-        <div class="account__wrapper">
-          <a class="account__link" href="#">Глеб</a>
-          <div class="account__settings"></div>
+        <div class="account">
+          <a class="account__link" href="#">
+            <span class="account__name">
+              Глеб
+            </span>
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="profile">
+    <section class="header__bottom">
+      <div class="header__bottom-wrapper">
         <nav class="profile-nav">
           <ul class="profile-nav__list">
             <li class="profile-nav__item">
@@ -84,15 +87,14 @@
               </a>
             </li>
           </ul>
-          <a class="profile__balance" href="#">
-            <span class="profile__balance-info">
-              0 руб.
-            </span>
-          </a>
         </nav>
-      </section>
-
-    </div>
+        <a class="profile__balance" href="#">
+          <span class="profile__balance-info">
+            0 руб.
+          </span>
+        </a>
+      </div>
+    </section>
   </header>
 
 
@@ -131,8 +133,8 @@
         </select>
 
         <div class="doctors__nav-tick">
-          <input class="doctors__nav-tick-label" id="expert" name="doctor type" type="checkbox" value="expert">
-          <label for="expert" class="doctors__nav-tick-label">
+          <input class="doctors__nav-tick-checkbox" id="expert" name="doctor type" type="checkbox" value="expert">
+          <label class="doctors__nav-tick-label" for="expert">
             Эксперт
           </label>
           <div class="help">
@@ -144,8 +146,8 @@
         </div>
 
         <div class="doctors__nav-tick">
-          <input class="doctors__nav-tick-label" id="consultant" name="doctor type" type="checkbox" value="expert">
-          <label for="consultant" class="doctors__nav-tick-label">
+          <input class="doctors__nav-tick-checkbox" id="consultant" name="doctor type" type="checkbox" value="expert">
+          <label class="doctors__nav-tick-label"  for="consultant">
             Консультант
           </label>
           <div class="help">
@@ -157,12 +159,12 @@
         </div>
       </section>
 
-      <section class="search-result search-result_active">
+      <section class="search-result">
         <div class="search-result__header">
           <b class="search-result__title search-result__title_active">
             Все врачи
           </b>
-          <b class="search-result__title search-result__title_active">
+          <b class="search-result__title">
             Избранные
           </b>
         </div>
@@ -189,7 +191,7 @@
                     Записаться на прием
                   </a>
                 </div>
-                <button class="add-to-favourites" type="button">
+                <button class="specialist__favourites" type="button">
                   Добавить в избранные
                 </button>
               </div>
@@ -217,7 +219,7 @@
                     Записаться на прием
                   </a>
                 </div>
-                <button class="add-to-favourites" type="button">
+                <button class="specialist__favourites specialist__favourites_active" type="button">
                   Убрать из избранных
                 </button>
               </div>
@@ -230,10 +232,6 @@
     </div>
   </main>
 
-
-  <footer>
-
-  </footer>
   <script src="js/script.js"></script>
 </body>
 </html>

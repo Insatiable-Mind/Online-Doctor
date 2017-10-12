@@ -1,0 +1,53 @@
+.profile-nav {
+  float: left;
+
+  @include width($prop: width, $unit: %, $child: 750, $parent: $header-bottom);
+}
+
+.profile-nav__list {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: bold;
+}
+
+.profile-nav__item {
+
+}
+
+.profile-nav__item-link {
+  color: $white;
+}
+
+.profile__balance {
+  float: right;
+  padding: 0 2rem;
+
+  @include width($prop: width, $unit: %, $child: 198, $parent: $header-bottom);
+
+  color: $white;
+
+  background-color: $darkblue;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    width: 30px;
+    height: 26px;
+    margin-top: -.8rem; // для доп. центровки
+
+    vertical-align: middle;
+
+    background: {
+      image: url('../img/spritesheet.png');
+      position:  -69px -10px;
+    }
+  }
+}
+
+.profile__balance-info {
+  margin-left: 1.3rem;
+
+  font-size: 2.5rem;
+}

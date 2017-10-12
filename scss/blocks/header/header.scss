@@ -1,0 +1,52 @@
+.header {
+  width: 100%;
+
+  font-size: 2rem;
+
+  box-shadow: 0 1.5rem 2rem rgba($black, .1);
+}
+
+.header__top {
+  @include width($prop: margin-left, $unit: %, $child: -65, $parent: $header-top);
+
+  padding: 2.5rem 0;
+
+  color: $black;
+  line-height: 7rem; // по высоте логотипа. если меняется высота логотипа, нужно менять это значение!
+}
+
+.header__top-wrapper {
+  @extend %container;
+
+  &::before,
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+.header__bottom {
+  line-height: 4rem;
+
+  background-color: $bg-blue;
+}
+
+.header__bottom-wrapper {
+  @extend %container;
+
+  &::before,
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+
+
+

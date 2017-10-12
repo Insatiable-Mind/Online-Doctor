@@ -1,0 +1,169 @@
+.header__top-wrapper, .header__bottom-wrapper, .main__container {
+  width: 68%;
+  margin: 0 auto; }
+
+@font-face {
+  font-family: "CirceRounded";
+  font-weight: normal;
+  src: url(../fonts/CircleRoundedRegular.woff2); }
+
+@font-face {
+  font-family: "CirceRounded";
+  font-weight: bold;
+  src: url(../fonts/CircleRoundedBold.woff2); }
+
+html {
+  font-family: "CirceRounded", sans-serif;
+  font-size: 62.5%;
+  line-height: 1.2;
+  color: #000; }
+
+body {
+  font-size: 1.8rem; }
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+.page-title {
+  font-size: 4.8rem;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.header {
+  width: 100%;
+  font-size: 2rem;
+  -webkit-box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.1); }
+
+.header__top {
+  margin-left: -4.60993%;
+  padding: 2.5rem 0;
+  color: #000;
+  line-height: 7rem; }
+
+.header__top-wrapper::before, .header__top-wrapper::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.header__bottom {
+  line-height: 4rem;
+  background-color: #4cbaca; }
+
+.header__bottom-wrapper::before, .header__bottom-wrapper::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.logo-wrapper {
+  float: left;
+  width: 12.76596%;
+  margin-right: 2.83688%; }
+
+.logo__link {
+  display: block; }
+
+.logo__img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.main-nav {
+  float: left;
+  width: 48.93617%; }
+
+.main-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-weight: bold; }
+
+.main-nav__item-link {
+  display: block; }
+  .main-nav__item-link:hover {
+    color: #08c0de; }
+
+.main-nav__item-link_active {
+  color: #08c0de; }
+  .main-nav__item-link_active:hover {
+    cursor: default; }
+
+.account {
+  float: right; }
+
+.account__link {
+  display: block; }
+  .account__link::before {
+    content: "";
+    display: inline-block;
+    width: 39px;
+    height: 44px;
+    margin-right: 2rem;
+    vertical-align: middle;
+    background-image: url("../img/spritesheet.png");
+    background-position: -10px -10px; }
+  .account__link::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 11px;
+    margin-left: 1rem;
+    vertical-align: middle;
+    background-image: url("../img/spritesheet.png");
+    background-position: -10px -74px; }
+
+.account__name {
+  vertical-align: middle;
+  border-bottom: 0.1rem dotted #000; }
+
+.profile-nav {
+  float: left;
+  width: 56.17978%; }
+
+.profile-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-weight: bold; }
+
+.profile-nav__item-link {
+  color: #fff; }
+
+.profile__balance {
+  float: right;
+  padding: 0 2rem;
+  width: 14.83146%;
+  color: #fff;
+  background-color: #00728f; }
+  .profile__balance::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 26px;
+    margin-top: -.8rem;
+    vertical-align: middle;
+    background-image: url("../img/spritesheet.png");
+    background-position: -69px -10px; }
+
+.profile__balance-info {
+  margin-left: 1.3rem;
+  font-size: 2.5rem; }
+
+.main {
+  width: 100%; }
