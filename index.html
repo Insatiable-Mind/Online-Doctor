@@ -10,14 +10,24 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+
+  <!-- 
+    Пояснение по вертикальным пробелам (для лучшей читаемости кода):
+    1 пробел для разделения сегментов внутри section, 
+    2 пробела для разделения блоков section,
+    4 пробела для разделения основных частей страницы (header, main, footer) 
+  -->
+
   <header class="header">
     <section class="header__top">
       <div class="header__top-wrapper">
+
         <div class="logo-wrapper">
           <a class="logo__link" href="#">
             <img class="logo__img" src="img/logo.png" title="Логотип Онлайн Доктор" alt="Логотип Онлайн Доктор" width="143" height="57">
           </a>
         </div>
+
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -52,6 +62,7 @@
             </li>
           </ul>
         </nav>
+
         <div class="account">
           <a class="account__link" href="#">
             <span class="account__name">
@@ -61,6 +72,7 @@
         </div>
       </div>
     </section>
+
 
     <section class="header__bottom">
       <div class="header__bottom-wrapper">
@@ -88,6 +100,7 @@
             </li>
           </ul>
         </nav>
+
         <a class="profile__balance" href="#">
           <span class="profile__balance-info">
             0 руб.
@@ -98,81 +111,140 @@
   </header>
 
 
+
+
   <main class="main">
     <div class="main__container">
 
       <section class="doctors-nav">
-        <h1 class="page-title">Наши врачи</h1>
-        <input class="doctors-nav__search" type="search" value="Введите имя врача">
-
-        <select class="doctors__nav-dropdown" name="age">
-          <option value="all" selected>Для взрослых и детей</option> 
-          <option value="adult">Для взрослых</option>
-          <option value="child">Для детей</option>
-        </select>
-
-        <select class="doctors__nav-dropdown" name="speciality">
-          <option value="all" selected>Все специальности</option> 
-          <option value="gynaecologist">Акушер-гинеколог</option>
-          <option value="allergenist">Аллерголог</option>
-          <option value="andrologist">Андролог</option>
-          <option value="anesthesiologist">Анестезиолог</option>
-          <option value="bacteriologist">Бактериолог</option>
-          <option value="venereologist">Венеролог</option>
-          <option value="virologist">Вирусолог</option>
-          <option value="functional diagnostician">Врач функциональной диагностики</option>
-          <option value="geneticist">Генетик</option>
-          <option value="pediatric surgeon">Детский хирург</option>
-          <option value="preimplantation genetic diagnosis specialist">Специалист по преимплантационной диагностике</option>
-        </select>
-
-        <select class="doctors__nav-dropdown" name="medical setting">
-          <option value="all" selected>Мед.учреждение</option> 
-          <option value="clinic">Клиника</option>
-          <option value="medical centre">Медицинский центр</option>
-        </select>
-
-        <div class="doctors__nav-tick">
-          <input class="doctors__nav-tick-checkbox" id="expert" name="doctor type" type="checkbox" value="expert">
-          <label class="doctors__nav-tick-label" for="expert">
-            Эксперт
-          </label>
-          <div class="help">
-            <div class="help__main">?</div>
-            <div class="help__info">
-              Врачи высшей категории, имеющие многолетний стаж работы и высокую квалификацию
-            </div>
-          </div>
+        <div class="doctors-nav__header">
+          <h1 class="page-title">Наши врачи</h1>
+          <form class="doctors-nav__search">
+            <input class="doctors-nav__search-input" type="search" placeholder="Введите имя врача">
+            <button class="doctors-nav__search-clear" type="reset"></button>
+          </form>
         </div>
 
-        <div class="doctors__nav-tick">
-          <input class="doctors__nav-tick-checkbox" id="consultant" name="doctor type" type="checkbox" value="expert">
-          <label class="doctors__nav-tick-label"  for="consultant">
-            Консультант
-          </label>
-          <div class="help">
-            <div class="help__main">?</div>
-            <div class="help__info">
-              Врачи высшей категории, имеющие многолетний стаж работы и высокую квалификацию
+        <div class="doctors-nav__list">
+          <div class="doctors-nav__dropdown">
+            <button class="doctors-nav__dropdown-btn" type="button">
+              <span class="doctors-nav__dropdown-btn-header">
+                Для взрослых и детей
+              </span>
+            </button>
+            <ul class="doctors-nav__dropdown-list">
+              <li class="doctors-nav__dropdown-item">
+                Для взрослых
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Для детей
+              </li>
+            </ul>
+          </div>
+
+          <div class="doctors-nav__dropdown">
+            <button class="doctors-nav__dropdown-btn" type="button">
+              <span class="doctors-nav__dropdown-btn-header">
+                Все специальности
+              </span>
+            </button>
+            <ul class="doctors-nav__dropdown-list">
+              <li class="doctors-nav__dropdown-item">
+                Акушер-гинеколог
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Аллерголог
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Андролог
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Анестезиолог
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Бактериолог
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Венеролог
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Вирусолог
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Врач функциональной диагностики
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Генетик
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Детский хирург
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Специалист по преимплантационной диагностике
+              </li>
+            </ul>
+          </div>
+
+          <div class="doctors-nav__dropdown">
+            <button class="doctors-nav__dropdown-btn" type="button">
+              <span class="doctors-nav__dropdown-btn-header">
+                Мед. учреждение
+              </span>
+            </button>
+            <ul class="doctors-nav__dropdown-list">
+              <li class="doctors-nav__dropdown-item">
+                Клиника
+              </li>
+              <li class="doctors-nav__dropdown-item">
+                Медицинский центр
+              </li>
+            </ul>
+          </div>
+
+          <div class="doctors-nav__tick">
+            <input class="doctors-nav__tick-checkbox" id="expert" name="doctor type" type="checkbox" value="expert" checked>
+            <label class="doctors-nav__tick-label" for="expert">
+              Эксперт
+            </label>
+            <div class="help">
+              <div class="help__info">
+                Врачи высшей категории, имеющие многолетний стаж работы и высокую квалификацию
+              </div>
+            </div>
+          </div>
+
+          <div class="doctors-nav__tick">
+            <input class="doctors-nav__tick-checkbox" id="consultant" name="doctor type" type="checkbox" value="expert">
+            <label class="doctors-nav__tick-label"  for="consultant">
+              Консультант
+            </label>
+            <div class="help">
+              <div class="help__info">
+                Врачи высшей категории, имеющие многолетний стаж работы и высокую квалификацию
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+
       <section class="search-result">
         <div class="search-result__header">
-          <b class="search-result__title search-result__title_active">
+          <a class="search-result__title search-result__title_active" href="#">
             Все врачи
-          </b>
-          <b class="search-result__title">
+          </a>
+          <a class="search-result__title" href="#">
             Избранные
-          </b>
+          </a>
         </div>
 
         <ul class="search-result__list">
+
           <li class="search-result__item">
             <article class="specialist">
-              <img class="specialist-img" src="#" title="Фотография специалиста" alt="Фотография специалиста">
+              <div class="specialist-img__wrapper">
+                <img class="specialist-img" src="img/specialist-no-photo.jpg" title="Фотография специалиста" alt="Фотография специалиста">
+              </div>
               <div class="specialist__about">
                 <h2 class="specialist__name">
                   Иванов Иван
@@ -180,19 +252,27 @@
                 <span class="specialist__specialities">
                   123, Акушер-Гинеколог
                 </span>
-                <span class="specialist__type">консультант</span>
+                <span class="specialist__type">
+                  консультант
+                </span>
               </div>
-
               <div class="specialist__management">
                 <div class="specialist__visit">
-                  Стоимость консультации
-                  <span class="specialist__visit-price">2000 &#8381;</span>
+                  <span class="specialist__visit-text">
+                    Стоимость консультации
+                  </span>
+                  <span class="specialist__visit-price">
+                    2000 &#8381;
+                  </span>
                   <a class="btn" href="#">
                     Записаться на прием
                   </a>
                 </div>
                 <button class="specialist__favourites" type="button">
-                  Добавить в избранные
+                  <i class="heart-icon"></i>
+                  <span class="specialist__favourites-text">
+                    Добавить в избранные
+                  </span>
                 </button>
               </div>
             </article>
@@ -200,7 +280,9 @@
 
           <li class="search-result__item">
             <article class="specialist">
-              <img class="specialist-img" src="#" title="Фотография специалиста" alt="Фотография специалиста">
+              <div class="specialist-img__wrapper">
+                <img class="specialist-img" src="img/specialist-sulima.jpg" title="Фотография специалиста" alt="Фотография специалиста">
+              </div>
               <div class="specialist__about">
                 <h2 class="specialist__name">
                   Сулима Светлана Владимировна
@@ -208,30 +290,41 @@
                 <span class="specialist__specialities">
                   Анестезиолог, Вирусолог, Венеролог, Аллерголог, Андролог, Бактериолог
                 </span>
-                <span class="specialist__type">эксперт</span>
+                <span class="specialist__type specialist__type_expert">
+                  эксперт
+                </span>
               </div>
-
               <div class="specialist__management">
                 <div class="specialist__visit">
-                  Стоимость консультации
-                  <span class="specialist__visit-price">1200 &#8381;</span>
+                  <span class="specialist__visit-text">
+                    Стоимость консультации
+                  </span>
+                  <span class="specialist__visit-price">
+                    1200 &#8381;
+                  </span>
                   <a class="btn" href="#">
                     Записаться на прием
                   </a>
                 </div>
                 <button class="specialist__favourites specialist__favourites_active" type="button">
-                  Убрать из избранных
+                  <i class="heart-icon"></i>
+                  <span class="specialist__favourites-text">
+                    Убрать из избранных
+                  </span>
                 </button>
               </div>
             </article>
           </li>
+
         </ul>
       </section>
-
-
     </div>
   </main>
 
+
+
+
+  <footer></footer>
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 .profile-nav {
-  float: left;
+  @include width($prop: width, $unit: %, $child: 750, $parent: $container);
 
-  @include width($prop: width, $unit: %, $child: 750, $parent: $header-bottom);
+  float: left;
 }
 
 .profile-nav__list {
@@ -11,19 +11,13 @@
   font-weight: bold;
 }
 
-.profile-nav__item {
-
-}
-
-.profile-nav__item-link {
-  color: $white;
-}
+.profile-nav__item-link { color: $white; }
 
 .profile__balance {
+  @include width($prop: width, $unit: %, $child: 198, $parent: $container);
+
   float: right;
   padding: 0 2rem;
-
-  @include width($prop: width, $unit: %, $child: 198, $parent: $header-bottom);
 
   color: $white;
 
@@ -35,14 +29,12 @@
     display: inline-block;
     width: 30px;
     height: 26px;
-    margin-top: -.8rem; // для доп. центровки
 
     vertical-align: middle;
 
-    background: {
-      image: url('../img/spritesheet.png');
-      position:  -69px -10px;
-    }
+    background: url("../img/spritesheet.png") -69px -10px;
+
+    transform: translateY(-20%); // для доп. центровки
   }
 }
 

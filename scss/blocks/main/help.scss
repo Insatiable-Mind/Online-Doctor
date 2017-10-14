@@ -1,11 +1,69 @@
 .help {
+  position: absolute;
+  top: -50%;
+  right: -2.6rem;
 
-}
+  width: 2.6rem;
+  height: 2.6rem;
 
-.help__main {
+  border-radius: 50%;
 
+  cursor: pointer;
+
+  &::after {
+    content: "?";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 1.8rem;
+    height: 1.8rem;
+
+    font-size: .9rem;
+    font-weight: bold;
+    color: #9c988e;
+    text-align: center;
+    line-height: 1.8rem;
+
+    background-color: #efeadb;
+    border: .4rem solid $white;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    &::after { 
+      z-index: 5;
+
+      color: $white;
+      background-color: $bg-blue;
+    }
+  }
 }
 
 .help__info {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  z-index: 3;
 
+  display: none;
+  box-sizing: border-box;
+  width: 19.3rem;
+  height: 10rem;
+  padding: 1.2rem 1rem;
+
+  font-size: $font-small;
+  color: #424542;
+  text-align: left;
+
+  background-color: $white;
+  border-radius: .4rem;
+  box-shadow: 0 0 3.5rem rgba($black, .15);
+}
+
+.help:hover .help__info {
+  display: block;
 }

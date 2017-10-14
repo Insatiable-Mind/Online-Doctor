@@ -1,0 +1,80 @@
+.doctors-nav__search {
+  @include width($prop: width, $unit: %, $child: 412, $parent: $container);
+
+  position: relative;
+
+  transform: translateY(10%); // для доп. центровки
+}
+
+.doctors-nav__search-input {
+  @include width($prop: width, $unit: %, $child: 224, $parent: 412);
+  @include inputPlaceholder(color, #96bbc8);
+
+  height: 4.7rem;
+  padding: 0 2rem;
+  padding: {
+    top: 1.4rem;
+    bottom: 1.7rem;
+  }
+
+  font-size: 1.6rem;
+  line-height: 4.7rem;
+
+  background-color: $lightblue;
+  border: 0;
+  border-radius: 2.5rem;
+
+  transition: width .3s linear;
+  cursor: pointer;
+
+  &:focus {
+    color: $black;
+
+    outline: none;
+  }
+}
+
+.doctors-nav__search-input_open {
+  width: 100%;
+
+  color: $black;
+
+  outline: none;
+}
+
+.doctors-nav__search-clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  display: none;
+  width: 4rem;
+  height: 100%;
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+
+  cursor: pointer;
+
+  &:focus { outline: none; }
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+
+    width: 16px;
+    height: 1px;
+
+    background-color: $darkblue;
+  }
+
+  &::before { transform: rotate(45deg); }
+
+  &::after { transform: rotate(-45deg); }
+}

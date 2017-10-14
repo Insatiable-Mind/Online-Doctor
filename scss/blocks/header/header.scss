@@ -1,9 +1,10 @@
 .header {
   width: 100%;
+  margin-bottom: 4.5rem;
 
-  font-size: 2rem;
+  font-size: $font-middle;
 
-  box-shadow: 0 1.5rem 2rem rgba($black, .1);
+  box-shadow: 0 1.5rem 1.5rem rgba($black, .15);
 }
 
 .header__top {
@@ -17,14 +18,7 @@
 
 .header__top-wrapper {
   @extend %container;
-
-  &::before,
-  &::after {
-    content: "";
-
-    display: table;
-    clear: both;
-  }
+  @extend %clearfix;
 }
 
 .header__bottom {
@@ -35,14 +29,7 @@
 
 .header__bottom-wrapper {
   @extend %container;
-
-  &::before,
-  &::after {
-    content: "";
-
-    display: table;
-    clear: both;
-  }
+  @extend %clearfix;
 }
 
 

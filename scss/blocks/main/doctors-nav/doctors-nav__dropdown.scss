@@ -1,0 +1,138 @@
+.doctors-nav__dropdown {
+  @include width($prop: margin-right, $unit: %, $child: 30, $parent: $container);
+
+  position: relative;
+
+  box-sizing: border-box;
+  width: 25.5rem;
+  height: 4.7rem;
+
+  &:nth-child(3) { margin: 0; }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 2.1rem;
+    right: 2.1rem;
+    z-index: 9;
+
+    width: .9rem;
+    height: .6rem;
+
+    background: {
+      image: url("../img/icon-dropdown-blue-closed.svg");
+      position: center;
+      size: contain;
+    }
+  }
+}
+
+.doctors-nav__dropdown_open {
+  &::before {
+    background-image: url("../img/icon-dropdown-blue-open.svg");
+  }
+}
+
+.doctors-nav__dropdown-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  box-sizing: border-box;
+  width: 25.5rem;
+  height: 4.7rem;
+  padding: 0 1.8rem;
+
+  text-align: left;
+
+  background-color: $white;
+  border: .3rem solid $lightblue2;
+  border-radius: 2.5rem;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: #c8e3e7;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.doctors-nav__dropdown_open .doctors-nav__dropdown-btn {
+  z-index: 8;
+
+  height: 5.3rem;
+
+  border: {
+    color: transparent;
+    radius: 1rem;
+    bottom-left-radius: 0;
+    bottom-right-radius: 0;
+  }
+  box-shadow: 0rem -1.5rem 3.5rem rgba($black, .08);
+}
+
+.doctors-nav__dropdown_open .doctors-nav__dropdown-btn::after {
+  background-image: url("../img/icon-dropdown-blue-open.svg");
+}
+
+.doctors-nav__dropdown-btn-header {
+  display: inline-block;
+  max-width: 19.5rem;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  overflow: hidden;
+}
+
+.doctors-nav__dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 100%;
+
+  overflow: hidden;
+
+  transform: translateY(5.3rem - 4.7rem); // разница между высотой .doctors-nav__dropdown и .doctors-nav__dropdown-btn
+}
+
+.doctors-nav__dropdown_open .doctors-nav__dropdown-list {
+  z-index: 5;
+
+  background-color: $white;
+  border: {
+    radius: 1rem;
+    top-left-radius: 0;
+  }
+  box-shadow: 0 0 3.5rem rgba($black, .15);
+}
+
+.doctors-nav__dropdown-item {
+  display: none;
+  padding: 2rem 2.2rem;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.doctors-nav__dropdown_open .doctors-nav__dropdown-item {
+  display: block;
+
+  &:hover {
+    color: $darkblue;
+
+    background-color: $lightblue2;
+  }
+
+  &:first-child { padding-top: 1.1rem; }
+
+  &:last-child { padding-bottom: 1.5rem; }
+}
