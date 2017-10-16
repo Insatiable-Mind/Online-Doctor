@@ -24,6 +24,8 @@ html {
   color: #000; }
 
 body {
+  width: 100%;
+  min-width: 1962px;
   font-size: 1.8rem; }
 
 a {

@@ -84,7 +84,13 @@ html {
   color: $black;
 }
 
-body { font-size: 1.8rem; }
+body {
+  width: 100%;
+  min-width: 1962px;
+
+  font-size: 1.8rem;
+}
+
 
 a {
   color: $black;
